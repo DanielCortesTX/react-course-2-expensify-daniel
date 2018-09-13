@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js",
-    "serve": "live-server public",
+    "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "build": "webpack",
     "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
