@@ -6,6 +6,7 @@ import AppRouter from './routers/AppRouter'
 import { addExpense } from './actions/expenses'
 import { setTextFilter } from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
+import './firebase/firebase'
 
 import { Provider } from 'react-redux'
 
