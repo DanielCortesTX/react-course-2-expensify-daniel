@@ -1,12 +1,6 @@
 import * as firebase from 'firebase'
 
 const config = {
-    // apiKey: "AIzaSyCSIJILp03NGIeCreYPCv4qbATW9okQNvc",
-    // authDomain: "expensify-32983.firebaseapp.com",
-    // databaseURL: "https://expensify-32983.firebaseio.com",
-    // projectId: "expensify-32983",
-    // storageBucket: "expensify-32983.appspot.com",
-    // messagingSenderId: "9620457935"
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
@@ -19,8 +13,9 @@ const config = {
   firebase.initializeApp(config)
 
   const database = firebase.database()
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider
 
-  export { firebase, database as default }
+  export { firebase, googleAuthProvider, database as default }
 
 //   database.ref('expenses').on('child_removed', (snapshot) => {
 //     console.log(snapshot.key, snapshot.val())
